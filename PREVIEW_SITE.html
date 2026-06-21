@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMN Service | Ремонт компьютеров премиум-класса</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#050b1a',
+                            navy: '#0A2466',
+                            neon: '#39FF14',
+                            silver: '#C0C0C0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050b1a; color: white; font-family: 'Inter', sans-serif; }
+        .neon-glow { box-shadow: 0 0 15px rgba(57, 255, 20, 0.4); }
+        .binary-bg {
+            position: absolute; inset: 0; opacity: 0.05; font-family: 'Roboto Mono';
+            font-size: 10px; line-height: 1; pointer-events: none; overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="fixed w-full z-50 bg-[#050b1a]/80 backdrop-blur-md border-b border-[#0A2466]/30">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-[#0A2466] rounded-lg flex items-center justify-center border border-[#39FF14]/50 neon-glow">
+                    <span class="text-[#39FF14] font-mono font-bold">RMN</span>
+                </div>
+                <span class="text-xl font-black tracking-tighter uppercase">Service</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#" class="hover:text-[#39FF14] transition-colors">Услуги</a>
+                <a href="#" class="hover:text-[#39FF14] transition-colors">О нас</a>
+                <a href="#" class="hover:text-[#39FF14] transition-colors">Цены</a>
+                <a href="#" class="hover:text-[#39FF14] transition-colors">Контакты</a>
+            </nav>
+            <button class="px-6 py-2.5 bg-[#39FF14] text-black font-bold rounded-full hover:scale-105 transition-transform neon-glow">
+                Вызвать мастера
+            </button>
+        </div>
+    </header>
+
+    <!-- Первый экран -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 100h600v600h-600z" fill="none" stroke="#39FF14" stroke-width="1" />
+                <circle cx="400" cy="400" r="50" fill="none" stroke="#39FF14" stroke-width="2" />
+                <path d="M400 350v-250M400 450v250M350 400h-250M450 400h250" stroke="#39FF14" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-block px-3 py-1 rounded-full bg-[#0A2466]/50 border border-[#39FF14]/30 text-[#39FF14] text-[10px] font-mono uppercase tracking-[0.2em] mb-6">
+                    System Status: Operational
+                </div>
+                <h1 class="text-6xl md:text-7xl font-black leading-[1.1] mb-8">
+                    Ремонт компьютеров с гарантией <span class="text-[#39FF14]">безопасности</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 leading-relaxed">
+                    Профессиональное обслуживание IT-инфраструктуры, сборка кастомных станций и защита ваших данных на аппаратном уровне.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="px-8 py-4 bg-[#0A2466] border border-[#39FF14]/50 text-white font-bold rounded-xl hover:bg-[#0A2466]/80 transition-all">
+                        Рассчитать стоимость
+                    </button>
+                    <div class="flex items-center gap-4 px-6 py-4 bg-white/5 rounded-xl border border-white/10">
+                        <span class="text-[#C0C0C0]">⚡</span>
+                        <span class="text-sm font-mono text-[#39FF14]">Response time: < 2h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок услуг -->
+    <section class="py-24 bg-[#0A2466]/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Наши услуги</h2>
+                    <div class="h-1 w-20 bg-[#39FF14]"></div>
+                </div>
+                <div class="text-[#C0C0C0] font-mono text-sm">01 // SERVICES</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl border border-[#C0C0C0]/20 bg-[#050b1a] hover:border-[#39FF14]/50 transition-all group">
+                    <div class="text-4xl mb-6">💻</div>
+                    <h3 class="text-xl font-bold mb-4">Ремонт ноутбуков</h3>
+                    <p class="text-slate-400 text-sm mb-6">Замена матриц, ремонт цепей питания, чистка и апгрейд.</p>
+                    <span class="text-[#39FF14] font-mono text-xs tracking-widest">DETAILS →</span>
+                </div>
+                <div class="p-8 rounded-2xl border border-[#C0C0C0]/20 bg-[#050b1a] hover:border-[#39FF14]/50 transition-all group">
+                    <div class="text-4xl mb-6">🖥️</div>
+                    <h3 class="text-xl font-bold mb-4">Моноблоки</h3>
+                    <p class="text-slate-400 text-sm mb-6">Сложный ремонт систем охлаждения и замена компонентов.</p>
+                    <span class="text-[#39FF14] font-mono text-xs tracking-widest">DETAILS →</span>
+                </div>
+                <div class="p-8 rounded-2xl border border-[#C0C0C0]/20 bg-[#050b1a] hover:border-[#39FF14]/50 transition-all group">
+                    <div class="text-4xl mb-6">🔒</div>
+                    <h3 class="text-xl font-bold mb-4">Безопасность</h3>
+                    <p class="text-slate-400 text-sm mb-6">Защита данных, удаление вирусов и аудит систем.</p>
+                    <span class="text-[#39FF14] font-mono text-xs tracking-widest">DETAILS →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="py-20 bg-[#050b1a] relative overflow-hidden border-t border-[#0A2466]/30">
+        <div class="binary-bg">
+            010101011010101010101101010101010101101010101010110101010101010110101010101011010101010101011010101010101101010101010101101010101010110101010101
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex justify-between items-center">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-[#0A2466] rounded flex items-center justify-center border border-[#39FF14]/50">
+                        <span class="text-[#39FF14] font-mono text-xs font-bold">RMN</span>
+                    </div>
+                    <span class="text-lg font-black tracking-tighter uppercase">Service</span>
+                </div>
+                <p class="text-slate-500 text-xs font-mono uppercase tracking-widest">© 2026 Premium IT Support</p>
+            </div>
+            <div class="text-right">
+                <div class="text-[#39FF14] font-mono text-sm mb-2">+7 (999) 000-00-00</div>
+                <div class="text-slate-500 text-[10px] font-mono uppercase tracking-widest">Encrypted Connection: AES-256</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
